@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #66BB6A; /* Verde más claro */
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+        }
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .game-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .game-card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .game-card h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .game-card .platform {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .game-card .platform img {
+            width: 24px;
+            height: 24px;
+        }
+        .game-card button {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1em;
+        }
+        .game-card button:hover {
+            background-color: #66BB6A; /* Verde más claro */
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            text-align: center;
+        }
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .modal-content {
+            margin: 20px 0;
+        }
+        .modal button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .modal button:hover {
+            background-color: #66BB6A;
+        }
+        footer {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Download Free Games</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Games</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="game-grid">
+            <!-- Game 1 -->
+            <div class="game-card">
+                <img src="https://ist7-1.filesor.com/pimpandhost.com/2/8/8/3/288351/e/k/X/P/ekXPg/schoolgirls_nanami_marina_espanol_l.jpg" alt="Game 1">
+                <h3>NANAMI & MARINA</h3>
+                <div class="platform">
+                    <img src="https://cdn-icons-png.flaticon.com/512/226/226770.png" alt="Android">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS">
+                </div>
+                <button onclick="startDownload('NANAMI & MARINA')">Download</button>
+            </div>
+
+            <!-- Game 2 -->
+            <div class="game-card">
+                <img src="https://ist7-1.filesor.com/pimpandhost.com/2/8/8/3/288351/e/m/z/n/emzn3/mios_summer_vacation_espanol_l.jpg" alt="Game 2">
+                <h3>MIO’S SUMMER VACATION</h3>
+                <div class="platform">
+                    <img src="https://cdn-icons-png.flaticon.com/512/226/226770.png" alt="Android">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS">
+                </div>
+                <button onclick="startDownload('MIO’S SUMMER VACATION')">Download</button>
+            </div>
+
+            <!-- Game 3 -->
+            <div class="game-card">
+                <img src="https://ist7-1.filesor.com/pimpandhost.com/2/8/8/3/288351/e/v/L/W/evLW3/MfvEmw_compress68_l.jpg" alt="Game 3">
+                <h3>VIRTUAL ANIME SUCCUBUS</h3>
+                <div class="platform">
+                    <img src="https://cdn-icons-png.flaticon.com/512/226/226770.png" alt="Android">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS">
+                </div>
+                <button onclick="startDownload('VIRTUAL ANIME SUCCUBUS')">Download</button>
+            </div>
+
+          <!-- Game 4 -->
+            <div class="game-card">
+                <img src="https://ist7-1.filesor.com/pimpandhost.com/2/8/8/3/288351/e/o/Z/R/eoZRG/love_is_like_a_dream_espanol_l.jpg" alt="Game 3">
+                <h3>LOVE IS LIKE A DREAM</h3>
+                <div class="platform">
+                    <img src="https://cdn-icons-png.flaticon.com/512/226/226770.png" alt="Android">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS">
+                </div>
+                <button onclick="startDownload('LOVE IS LIKE A DREAM')">Download</button>
+            </div>
+
+          <!-- Game 5 -->
+            <div class="game-card">
+                <img src="https://ist7-1.filesor.com/pimpandhost.com/2/8/8/3/288351/e/q/v/Q/eqvQc/qos_mlf_espanol_l.jpg" alt="Game 3">
+                <h3>QOS MILF</h3>
+                <div class="platform">
+                    <img src="https://cdn-icons-png.flaticon.com/512/226/226770.png" alt="Android">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS">
+                </div>
+                <button onclick="startDownload('QOS MILF')">Download</button>
+            </div>
+
+
+    <!-- Ventana modal -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal" id="modal">
+        <div class="modal-content" id="modalContent">
+            <p id="modalMessage">Loading...</p>
+        </div>
+        <button id="modalButton" style="display: none;" onclick="completeDownload()">Continue</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Download Games. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let contentLockerUrl = "https://rockingfolders.com/1785434"; // Cambia esto por tu enlace del content locker
+
+        function startDownload(gameName) {
+            // Mostrar la ventana modal
+            document.getElementById('modalOverlay').style.display = 'block';
+            document.getElementById('modal').style.display = 'block';
+            document.getElementById('modalMessage').textContent = "Loading... Please wait";
+
+            // Simular un retraso antes de pedir la verificación
+            setTimeout(() => {
+                document.getElementById('modalMessage').textContent = "Please verify that you are not a robot.";
+                document.getElementById('modalButton').style.display = 'block';
+            }, 3000); // 3 segundos de retraso
+        }
+
+        function completeDownload() {
+            // Mostrar mensaje de completado
+            document.getElementById('modalMessage').textContent = "Completed! Redirecting...";
+
+            // Redirigir al enlace del content locker después de 2 segundos
+            setTimeout(() => {
+                window.location.href = contentLockerUrl;
+            }, 2000); // 2 segundos de retraso
+        }
+    </script>
+
+</body>
+</html>
